@@ -1,0 +1,31 @@
+{
+  "name": "vianetz/signaturportal-api",
+  "description": "A library that provides method to connect to the Signaturportal SOAP API.",
+  "version": "1.0.0",
+  "type": "library",
+  "keywords": [
+    "vianetz",
+    "pdf"
+  ],
+  "homepage": "https://www.vianetz.com",
+  "license": "free",
+  "authors": [
+    {
+      "name": "Christoph Massmann",
+      "email": "c.massmann@vianetz.com",
+      "homepage": "http://www.vianetz.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@vianetz.com"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vianetz\\Signaturportal\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  }
+}
