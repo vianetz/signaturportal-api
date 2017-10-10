@@ -117,10 +117,14 @@ class Client
      */
     private function encodeContents($filename)
     {
+        if (file_exists($filename) === false || is_readable($filename) === false) {
+            throw new SignException('Cannot open file to sign: ' . $filename);
+        }
+
         $binaryData = '';
         try {
             $fp = fopen($filename, 'r');
-            while (feof($fp) === false) {
+            while ($fp !== false && feof($fp) === false) {
                 $binaryData .= fgets($fp, 4096);
             }
             fclose($fp);
